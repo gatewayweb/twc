@@ -1,2 +1,4 @@
-export * from "./buildClassString";
-export * from "./resolveComponentMappers"
+import buildClassString from "./buildClassString";
+import resolveComponentMappers from "./resolveComponentMappers";
+
+export { buildClassString, resolveComponentMappers }
