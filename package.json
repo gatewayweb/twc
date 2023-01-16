@@ -1,9 +1,10 @@
 {
   "name": "@gatewayweb/twc",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "type": "module",
   "main": "./dist/twc.umd.js",
   "module": "./dist/twc.js",
+  "types": "./dist/types.d.ts",
   "exports": {
     ".": {
       "import": "./dist/twc.js",
