@@ -1,0 +1,26 @@
+{
+  "name": "twc",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/twc.umd.js",
+  "module": "./dist/twc.js",
+  "exports": {
+    ".": {
+      "import": "./dist/twc.js",
+      "require": "./dist/twc.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0"
+  },
+  "dependencies": {
+    "tailwind-merge": "^1.8.1"
+  }
+}
