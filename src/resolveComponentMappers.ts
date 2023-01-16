@@ -1,8 +1,10 @@
 import buildClassString from "./buildClassString";
 
+import { StringProps, MapperConfigProps } from "./types";
+
 export const resolveComponentMappers = (
-  props: { [key: string]: any },
-  config: { componentsMapper: any; variantsMapper: any }
+  props: StringProps,
+  config: MapperConfigProps
 ) => {
   const { componentsMapper, variantsMapper } = config;
 

@@ -1,18 +1,8 @@
 import { twMerge } from "tailwind-merge";
 
-export interface StringProps {
-  [key: string]: any;
-}
+import { VariantProps, BuildClassStringProps  } from "./types";
 
-export interface VariantProps {
-  props: StringProps;
-  classNames: StringProps;
-}
-
-export const buildClassString = (
-  variants: VariantProps[],
-  props: { [key: string]: any }
-) => {
+export const buildClassString = (variants:VariantProps[],props:BuildClassStringProps) => {
   let classes: { [key: string]: any } = {};
   let propsObject: { [key: string]: any } = {};
   let variantProps: Array<string> = [];
