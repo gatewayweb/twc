@@ -8,10 +8,20 @@ export interface VariantProps {
 }
 
 export interface BuildClassStringProps {
-  [key: string]: any
+  [key: string]: any;
 }
 
-export interface MapperConfigProps {
-  componentsMapper: any;
-  variantsMapper: any;
+export interface Variant {
+  props: {
+    [key: string]: RegExp | string[] | string;
+  };
+  classNames: {
+    [key: string]: string;
+  };
+}
+export interface Variants {
+  default?: {
+    [key: string]: string;
+  };
+  variants: Variant[];
 }

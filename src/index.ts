@@ -1,4 +1,3 @@
-export * from "./buildClassString";
-export * from "./resolveComponentMappers";
+export * from "./resolveClassNames";
 
-export * from "./types"
+export * from "./types";
