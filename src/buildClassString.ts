@@ -6,16 +6,19 @@ export const buildClassString = (
   variantObject: any,
   props: BuildClassStringProps
 ) => {
-  let classes: { [key: string]: any } = {};
   let propsObject: { [key: string]: any } = {};
   let variantProps: Array<string> = [];
-
-  if (!props) return {};
 
   const copyVariantObject = { ...variantObject };
 
   const defaultClasses: any = copyVariantObject?.base ?? {};
+
+  if (!variantObject || !variantObject?.variants || !props)
+    return defaultClasses;
+
   const variants: any[] = [...copyVariantObject?.variants];
+
+  let classes: { [key: string]: any } = { ...defaultClasses };
 
   variants?.forEach((variant) => {
     if (variant?.props) {

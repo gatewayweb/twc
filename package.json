@@ -1,6 +1,6 @@
 {
   "name": "@gateway-web/twc",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "homepage": "https://tailwindcss-components.vercel.app/",
   "type": "module",
   "main": "./dist/twc.umd.js",
@@ -8,8 +8,14 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/twc.js",
-      "require": "./dist/twc.umd.js"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/twc.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/twc.umd.js"
+      }
     }
   },
   "scripts": {

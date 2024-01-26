@@ -20,7 +20,7 @@ export interface Variant {
   };
 }
 export interface Variants {
-  default?: {
+  base?: {
     [key: string]: string;
   };
   variants: Variant[];
