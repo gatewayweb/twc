@@ -13,7 +13,14 @@ export interface BuildClassStringProps {
 
 export interface Variant {
   props: {
-    [key: string]: RegExp | string[] | string;
+    [key: string]:
+      | RegExp
+      | string[]
+      | string
+      | number
+      | boolean
+      | undefined
+      | null;
   };
   classNames: {
     [key: string]: string;

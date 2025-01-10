@@ -86,3 +86,47 @@ const Component = (props) => {
 
 <Component color="purple" />
 ```
+
+## advanced options
+
+### clean function
+
+As of version 1.0.4, you can now pass in a function to transform the props before twc tries to match. This is useful to reformat values or clean props up as needed. Trops are passed to the function as the only parameter.
+
+```
+const classes = twc(variants, props, {
+  cleanFunction(props:any) => {
+    return {
+      ...props,
+      color: props.color.toLowerCase()
+    }
+  }
+});
+```
+
+---
+
+### typed variants
+
+You can optionally apply your own type to the variants object passed into the `twc` function.
+
+```
+type VariantObject = {
+  props: YourComponentProps;
+  classNames: {
+    [key: string]: string;
+  };
+};
+
+type Variants = {
+  base: {
+    [key: string]: string;
+  };
+  variants: VariantObject[];
+};
+
+const variants: Variants = {
+  base: { ... },
+  variants: [ ... ]
+}
+```

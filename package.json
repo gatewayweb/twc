@@ -1,6 +1,6 @@
 {
   "name": "@gateway-web/twc",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "homepage": "https://tailwindcss-components.vercel.app/",
   "type": "module",
   "main": "./dist/twc.umd.js",
@@ -29,7 +29,7 @@
     "vite-plugin-dts": "^1.7.1"
   },
   "dependencies": {
-    "tailwind-merge": "^1.8.1"
+    "tailwind-merge": "^2.6.0"
   },
   "files": [
     "dist"

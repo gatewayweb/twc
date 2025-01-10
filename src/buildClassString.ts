@@ -56,24 +56,9 @@ export const buildClassString = (
             Object.prototype.toString.call(propValue) == "[object RegExp]"
           ) {
             const regexTest = new RegExp(propValue);
-            // console.log(propValue.test(componentProps?.[requiredProp]));
+
             return !regexTest.test(componentProps?.[requiredProp]);
           }
-
-          // if (typeof propValue?.charAt !== "undefined") {
-          //   const [firstLetter, lastLetter] = [
-          //     propValue?.charAt(0) ?? "",
-          //     propValue?.charAt(propValue.length - 1) ?? "",
-          //   ];
-
-          //   if (firstLetter === "(" && lastLetter === ")") {
-          //     //check for multiple values
-          //     // to do: just make regex match
-          //     const values = propValue.slice(1, -1).split("|");
-          //     return !values.includes(componentProps?.[requiredProp]);
-          //   }
-          // }
-
           return componentProps?.[requiredProp] !== propValue;
         });
 

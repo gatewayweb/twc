@@ -5,7 +5,19 @@ interface ReturnObject {
   [key: string]: string;
 }
 
-export const twc = (variants: Variants, props: any): ReturnObject => {
+interface TwcOptions {
+  cleanFunction?: (props: any) => any;
+}
+
+export const twc = <T>(
+  variants: Variants | T,
+  props: any,
+  options?: TwcOptions
+): ReturnObject => {
+  if (options?.cleanFunction && typeof options.cleanFunction === "function") {
+    props = options.cleanFunction(props);
+  }
+
   const classNames = buildClassString(variants, { ...props });
 
   return classNames;
